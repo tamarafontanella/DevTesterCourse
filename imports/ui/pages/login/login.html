@@ -1,0 +1,38 @@
+<template name="login_Page">
+    <div class="ui container center aligned box">
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <form id="signinForm" class="ui segment form">
+                    <img class="ui centered medium image" src="/img/logo.png" alt="">
+
+                    <div class="ui hidden divider"></div>
+
+                    {{#if alertMessage}}
+                    <div class="alert ui {{alertMessage.color}} message">{{alertMessage.value}}</div>
+                    {{/if}}
+
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <input type="text" name="email" placeholder="Seu email">
+                            <i class="at icon"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <input type="password" name="password" placeholder="Senha">
+                            <i class="lock icon"></i>
+                        </div>
+                    </div>
+                    <button id=signin class="ui blue fluid button">Entrar</button>
+                </form>
+                <div class="ui message">
+                    Não tem uma conta? <a href="/signup">Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</template>

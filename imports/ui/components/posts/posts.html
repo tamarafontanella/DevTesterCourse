@@ -1,0 +1,23 @@
+<template name="posts">
+    {{#each posts}}
+    <div class="ui centered card instaCard">
+        <div class="content">
+            <img class="ui avatar image" src="{{avatar}}" alt="">
+            {{user}}
+        </div>
+        <div class="image">
+            <img src="/uploads/photos/{{photo}}" alt="">
+        </div>
+        <div class="content">
+            <span class="right floatead">
+                {{#if myPost userId}}
+                <i class="trash alternate outline icon"></i>
+                {{/if}}
+            </span>
+            <i class="heart outline icon"></i>
+            {{totalLikes likes}} Curtidas
+        </div>
+    </div>
+    {{/each}}
+
+</template>
